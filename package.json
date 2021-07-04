@@ -1,0 +1,25 @@
+{
+  "name": "programa-doa",
+  "version": "1.0.0",
+  "description": "web app en azure",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amr205/programa-doa.git"
+  },
+  "keywords": [
+    "web"
+  ],
+  "author": "alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amr205/programa-doa/issues"
+  },
+  "homepage": "https://github.com/amr205/programa-doa#readme",
+  "dependencies": {
+    "express":"4.17.1"
+  }
+}
