@@ -10,7 +10,7 @@ resources:
 
 variables:
   tag: '$(Build.BuildId)'
-  ImageName: 'doaWebApp'
+  ImageName: 'doawebapp'
 
 stages:
 - stage: Build
