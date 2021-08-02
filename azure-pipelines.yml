@@ -24,7 +24,6 @@ stages:
     - task: Docker@2
       displayName: Build an image
       inputs:
-        repository: '$(ImageName)'
         command: build
         dockerfile: '**/Dockerfile'
         tags: |
@@ -32,7 +31,6 @@ stages:
     - task: Docker@2
       displayName: 'Save image to TAR'
       inputs:
-        repository: '$(ImageName)'
         command: save
         arguments: '--output $(build.artifactstagingdirectory)/$(ImageName).image.tar $(ImageName):$(Build.BuildId)'
         addPipelineData: false
