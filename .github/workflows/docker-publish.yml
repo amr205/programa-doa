@@ -24,10 +24,12 @@ env:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
+    needs: test
 
     steps:
       - name: Checkout repository
@@ -74,7 +76,7 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-          
+
       - run: npm install
       - run: npm test
 
