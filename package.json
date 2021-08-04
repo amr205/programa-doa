@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "jest"
+    "test": "jest --testNamePattern local"
   },
   "repository": {
     "type": "git",
@@ -22,5 +22,8 @@
   "homepage": "https://github.com/amr205/programa-doa#readme",
   "dependencies": {
     "express": "4.17.1"
+  },
+  "devDependencies": {
+    "jest": "27.0.6"
   }
 }
