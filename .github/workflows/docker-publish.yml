@@ -68,6 +68,8 @@ jobs:
       packages: write
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
       - name: Install node
         uses: actions/setup-node@v2
         with:
