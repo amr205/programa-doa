@@ -99,5 +99,6 @@ jobs:
         with:
           command: up
           stack-name: dev
+          work-dir: ./iac/
         env:
           PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
