@@ -2,10 +2,10 @@
   "name": "programa-doa",
   "version": "1.0.0",
   "description": "web app",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "jest --testNamePattern local"
+    "start": "node server.js",
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",
@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/amr205/programa-doa#readme",
   "dependencies": {
-    "express": "4.17.1"
+    "@types/jest": "^26.0.24",
+    "express": "4.17.1",
+    "http-errors": "1.8.0"
   },
   "devDependencies": {
-    "jest": "27.0.6"
+    "jest": "27.0.6",
+    "supertest": "6.1.4"
   }
 }
