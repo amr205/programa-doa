@@ -91,9 +91,9 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: '14'
-          working-directory: ./iac/
 
       - run: npm install
+        working-directory: ./iac/
 
       - uses: pulumi/actions@v3
         with:
