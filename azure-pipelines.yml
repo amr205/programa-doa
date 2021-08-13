@@ -27,4 +27,5 @@ steps:
     args: '--yes'
     command: 'up'
     cwd: './iac/'
-    stack: 'amr205/iac-doa/dev'
+    stack: 'dev'
+    createStack: true
