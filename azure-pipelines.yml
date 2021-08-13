@@ -17,5 +17,6 @@ steps:
   inputs:
     azureSubscription: 'Pay-As-You-Go(86de1a6c-15c9-410b-af3b-8be358078c5c)'
     command: 'up'
+    loginArgs: https://app.pulumi.com/amr205
     cwd: './iac/'
     stack: 'dev'
