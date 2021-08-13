@@ -16,7 +16,8 @@ steps:
 - task: Pulumi@1
   inputs:
     azureSubscription: 'Pay-As-You-Go(86de1a6c-15c9-410b-af3b-8be358078c5c)'
-    loginArgs: '--yes'
+    loginArgs:
+    args: '--yes'
     command: 'up'
     cwd: './iac/'
     stack: 'amr205/iac-doa/dev'
