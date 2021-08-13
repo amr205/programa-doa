@@ -16,7 +16,7 @@ steps:
 - task: Pulumi@1
   inputs:
     azureSubscription: 'Pay-As-You-Go(86de1a6c-15c9-410b-af3b-8be358078c5c)'
+    args: '--yes --diff --refresh --non-interactive --skip-preview'
     command: 'up'
-    loginArgs: https://app.pulumi.com/amr205
     cwd: './iac/'
-    stack: 'dev'
+    stack: 'amr205/iac-doa/dev'
