@@ -10,12 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 - task: NodeTool@0
   inputs:
-    versionSpec: '6.x'
+    versionSpec: '14.x'
 - task: Npm@1
   inputs:
     command: 'install'
@@ -29,3 +26,4 @@ steps:
     cwd: './iac/'
     stack: 'dev'
     createStack: true
+
