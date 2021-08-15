@@ -86,6 +86,9 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      
+      - name: Azure Login
+        uses: Azure/login@v1
 
       - uses: hashicorp/setup-terraform@v1
 
