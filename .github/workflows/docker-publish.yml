@@ -1,4 +1,4 @@
-name: Docker
+name: CICD_pipeline
 
 # This workflow uses actions that are not certified by GitHub.
 # They are provided by a third-party and are governed by
@@ -87,18 +87,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
-      - name: Setup node
-        uses: actions/setup-node@v2
-        with:
-          node-version: '14'
+      - uses: hashicorp/setup-terraform@v1
 
-      - run: npm install
-        working-directory: ./iac/
+      - run: terraform init
+        working-directory: ./tf_iac/
 
-      - uses: pulumi/actions@v3
-        with:
-          command: up
-          stack-name: dev
-          work-dir: ./iac/
-        env:
-          PULUMI_ACCESS_TOKEN: ${{ secrets.PULUMI_ACCESS_TOKEN }}
+      - run: terraform plan -no-color
+        working-directory: ./tf_iac/
+      
+      - run: terraform apply -auto-approve
+        working-directory: ./tf_iac/

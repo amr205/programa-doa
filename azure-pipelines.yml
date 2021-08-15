@@ -1,0 +1,29 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- task: NodeTool@0
+  inputs:
+    versionSpec: '14.x'
+- task: Npm@1
+  inputs:
+    command: 'install'
+    workingDir: './iac/'
+
+- task: Pulumi@1
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(86de1a6c-15c9-410b-af3b-8be358078c5c)'
+    args: '--yes'
+    command: 'up'
+    cwd: './iac/'
+    stack: 'dev'
+    createStack: true
+
