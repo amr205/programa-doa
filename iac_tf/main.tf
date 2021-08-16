@@ -12,7 +12,7 @@ provider "azurerm" {
   features {}
 }
 
-resource "azurerm_resource_group" "rg-doa-tf" {
-  name     = "rg-doa-tf"
+resource "azurerm_resource_group" "rg-doa-tffff" {
+  name     = "rg-doa-tffff"
   location = "westus"
 }
