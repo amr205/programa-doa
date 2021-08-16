@@ -92,14 +92,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-
+      
       - uses: hashicorp/setup-terraform@v1
 
       - run: terraform init
-        working-directory: ./tf_iac/
-
-      - run: terraform plan -no-color
-        working-directory: ./tf_iac/
+        working-directory: ./iac_tf/
       
-      - run: terraform apply -auto-approve
-        working-directory: ./tf_iac/
+      - run: terraform plan -no-color
+        working-directory: ./iac_tf/
+      
+      - run: terraform aply -auto-approve 
+        working-directory: ./iac_tf/
