@@ -1,4 +1,11 @@
 terraform {
+  backend "remote" {
+    organization = "amr205"
+
+    workspaces {
+      name = "MyDoaWorkspace"
+    }
+  }
   required_providers {
     azurerm = {
       source  = "hashicorp/azurerm"
